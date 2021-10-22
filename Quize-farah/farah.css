@@ -97,31 +97,52 @@ a.brand{
 
 
 
-/* card result  */
-.card-result{
+.cont{
 
-margin: 100px  auto; 
- width:50% ;
-height: 60%;
+background-color: #c0c0c0;
+margin: 50px auto;
+width:50%;
+height: 80%;
+border-radius: 10px;
 
 
+
 }
- /* pass faile  */
-.text-card{
-    font-size: 50px;
-    margin-bottom: 50px;
+.cont-body{
+margin-bottom: 50px;
+
 }
-/* score  */
-.b-card{
-    width: 150px;
-    height:50px;
-    font-size: 20px;
-    line-height:auto;
+.title{
+text-align: center;
+padding-top: 80px;
+font-size: 40px;
+color: black;
 }
-/* link show your result  */
-.link-card{
-    color: #0b92a7;
+.cont-button{
+text-align: center;
+margin-bottom: 100px;
+
 }
-.float{
-    float: right;
+.b1{
+    width:50%;
+height: 10vh;
+border-radius: 20px;
+background-color: #ACE4EC;
+font-size: 30px;
+color: black;
+border-color:  #ACE4EC  ;
+border-style: solid;
 }
+.b1:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  .b1:hover{
+
+    background-color: rgb(127, 208, 228);
+  }
+
+.cont-link{
+font-size: 20px;
+text-align: center;
+color:black ;
+font-weight: bolder;}
