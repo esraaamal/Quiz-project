@@ -31,15 +31,21 @@
             <h2>Sign Up</h2>
 
             <div class="input_part1">
-            <p>Username</p>
-            <input type="text" name="" id="">
-            <p>Email</p>
-            <input type="email" name="" id="">
-            <p>Password</p>
-            <input type="password" name="" id=""> <br>
+            <p>Username <span>*</span></p>
+            <input type="text" name="" id="input_username">
+                  <div id="username_help" class="form-text">The Password should be between 4-15 characters. </div>
+            <p>Email <span>*</span></p>
+            <input type="email" name="" id="input_email">
+           
+                  <div id="email_help" class="form-text">eg: username@domain.com</div>
+            <p>Password <span>*</span></p>
+            
+            <input type="password" name="" id="input_pass"> <br>
+         
+                  <div id="pass_help" class="form-text">The Password should be between 6-18 characters.</div>
         </div>
             <div class="input_part2">
-            <a href="#" class="myButton">Login</a>
+            <a href="#" id="signup_btn" class="myButton">Login</a>
             <p>Already have an account? <a class="reg" href="sign_in.html">Sign In</a></p>
         </div>
    
@@ -51,6 +57,7 @@
             @All right reserved
         </footer>
     </div>
+    <script src="sign.js"></script>
 </body>
 
 </html>

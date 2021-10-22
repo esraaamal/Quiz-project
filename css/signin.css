@@ -26,7 +26,14 @@ font-size: 30px;
    border: 2px #ACE4EC solid;
     caret-color: #ACE4EC;
 }
-
+.form-text{
+    /* margin-top: -15px; */
+    font-size: 12px;
+    opacity: 0.5;
+}
+span{
+    color: #ACE4EC;
+}
 
 .input_part2{
     text-align: center;
@@ -46,7 +53,7 @@ font-size: 30px;
 	padding:16px 31px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #ACE4EC;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 .myButton:hover {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
@@ -73,6 +80,11 @@ font-size: 30px;
 
         width: 90%;
         height: 85%;
+    }
+    .myButton {
+
+        padding:5px 31px;
+
     }
 }
 
