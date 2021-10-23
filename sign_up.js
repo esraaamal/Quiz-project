@@ -16,20 +16,14 @@ const input_pass = document.getElementById("input_pass");
 const pass_help = document.getElementById("pass_help");
 
 const format_pass = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
-
-
 function sginFunction() {
-
     //userName
     if (input_username.value === "") {
 
         username_help.innerHTML = "username is empty";
         username_help.style.color = "red";
-
     }
     else {
-
-
         if (input_username.value.match(username_format)) {
 
             username_help.innerHTML = "";
@@ -41,7 +35,6 @@ function sginFunction() {
             username_help.style.color = "red";
         }
     }
-
     //email
 
     if (input_email.value === "") {
@@ -66,9 +59,6 @@ function sginFunction() {
             email_help.style.color = "red";
         }
     }
-
-
-
     //pass
     if (input_pass.value === "") {
 
@@ -86,19 +76,8 @@ function sginFunction() {
             pass_help.style.color = "red";
 
         }
-
-
-
-
-
     }
 }
-// let usernames =[];
-// let passwords=[];
-// let emails=[];
-
-let users = [];
-
 form.addEventListener("submit", storage);
 
 function storage() {
@@ -112,16 +91,6 @@ function storage() {
         input_pass.value = "";
     }
 }
-
-// signInForm.addEventListener("submit", storageLogIn);
-// let email1 = localStorage.getItem('email');
-// let pass1 = localStorage.getItem('pass');
-// let bole = false;
-// function storageLogIn() {
-//     if (emailSignInInput === email1) {
-//     b
-//     }
-// }
 
 
 
