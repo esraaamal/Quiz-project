@@ -1,77 +1,86 @@
-html{
-    font-size: 62.5%; /*16px x 62.5=10px=1rem*/
+html {
+    font-size: 62.5%;
+    /*16px x 62.5=10px=1rem*/
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0;
     height: 100vh;
     font-size: 1.6rem;
-    font-family: Helvetica,Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
-.grid-container{
+.grid-container {
     height: 100%;
     display: grid;
-    grid-template-areas: 
-    'header'
-    'main'
-    'footer'
-    ;
+    grid-template-areas: 'header' 'main' 'footer';
     grid-template-columns: 1fr;
     grid-template-rows: 5rem 1fr 5rem;
 }
-header{
-    grid-area: header;
-    background: #ACE4EC ;}
 
-main{
+header {
+    grid-area: header;
+    background: #ACE4EC;
+}
+
+main {
     grid-area: main;
     padding: 1rem;
 }
-footer{
+
+footer {
     grid-area: footer;
-    background: #ACE4EC ;
+    background: #ACE4EC;
     color: #ffffff;
 }
+
 /* common */
-h1{
+
+h1 {
     font-size: 1.8rem;
     padding: 1rem 0;
 }
-h2{
+
+h2 {
     font-size: 1.6rem;
     padding: 1rem 0;
 }
-a{
+
+a {
     text-decoration: none;
 }
-a:hover{
+
+a:hover {
     color: #ff8000;
 }
+
 /* header */
-header a{
+
+header a {
     padding: 1rem;
     color: #ffffff;
 }
-a.brand{
+
+a.brand {
     color: #ffffff;
     font-size: 3rem;
     font-weight: bold;
 }
-.row{
+
+.row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    
     justify-content: space-between;
     align-items: center;
 }
-.row.center{
+
+.row.center {
     justify-content: center;
 }
 
-.card{
+.card {
     border: 0.1rem solid #c0c0c0;
     background: #f8f8f8;
     border-radius: 0.5rem;
@@ -79,18 +88,26 @@ a.brand{
     width: 22%;
     padding: 2%;
 }
-.card-body{
+
+.card-body {
     padding: 1rem;
 }
-/* all direct child for the card-body */
-.card-body>*{
-    margin-bottom: 0.5rem;
 
+/* all direct child for the card-body */
+
+.card-body>* {
+    margin-bottom: 0.5rem;
 }
-.Estimate-time{
+
+.Estimate-time {
     font-size: 2rem;
 }
 
-.row a{
+.row a {
     width: 100px;
+}
+
+.start {
+    background-color: #f8f8f8;
+    color: #ACE4EC;
 }
