@@ -11,7 +11,7 @@ const username_format= /^[a-zA-Z0-9_$\.]{4,16}$/;
 
 const input_email = document.getElementById("input_email");
 const email_help = document.getElementById("email_help");
-const email_format = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const email_format = /^[A-ZA-z0-9._-]+@(hotmail|gmail|yahoo|outlook).com$/;
 
 //password
 const input_pass = document.getElementById("input_pass");
@@ -86,5 +86,11 @@ else{
        
         pass_help.innerHTML="Password Not Valid";  
         pass_help.style.color="red";
+       
     }
+   
 }}
+
+
+
+
