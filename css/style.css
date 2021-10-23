@@ -8,6 +8,7 @@ body{
     height: 100vh;
     font-size: 1.6rem;
     font-family: Helvetica,Arial, sans-serif;
+    /* overflow: hidden; */
 }
 
 .grid-container{
@@ -59,38 +60,65 @@ a.brand{
     font-size: 3rem;
     font-weight: bold;
 }
-.row{
+.rowHeader{
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    
     justify-content: space-between;
     align-items: center;
 }
-.row.center{
-    justify-content: center;
+.centerGenral{
+
+        justify-content: center;
+  
 }
 
 .card{
     border: 0.1rem solid #c0c0c0;
     background: #f8f8f8;
     border-radius: 0.5rem;
-    margin: 2rem 1rem;
-    width: 22%;
-    padding: 2%;
+    margin: 0rem 6rem;
+   text-align: center;
 }
-.card-body{
-    padding: 1rem;
-}
-/* all direct child for the card-body */
-.card-body>*{
-    margin-bottom: 0.5rem;
+.quizCard{
+    justify-content: center;
+    /* margin-top: 220px; */
 
 }
-.Estimate-time{
-    font-size: 2rem;
-}
 
-.row a{
-    width: 100px;
+
+
+.fab {
+    font-size: 150px;
+    color: #E44D26;
+
+}
+.fa-css3-alt{
+color: #0070BA;
+}
+.js{
+    color: #63A814;
+}
+.card-text{
+    /* text-align: justify; */
+}
+.card-title{
+    font-weight: 900;
+    font-size: 20px;
+}
+.quizBtn{
+    font-size: 15px;
+} 
+.mainSection{
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows:5rem 1fr; 
+}
+.welcomeQuiz{
+    font-size: 21px;
+    text-align: center;
+    margin-top: 60px;
+
+}
+#register{
+    display: inline;
 }
