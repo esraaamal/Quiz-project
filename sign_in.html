@@ -26,29 +26,31 @@
 
 
         </header>
-
+        <form id="sign-in-form" action="index.html">
         <section id="signin_section">
             <h2>Sign In</h2>
 
-            <div class="input_part1">
+    <div class="input_part1">
             <p>Email</p>
-            <input type="email" name="" id="">
+            <input type="email" name="" id="emailSignInInput">
             <p>Password</p>
-            <input type="password" name="" id=""> <br>
-        </div>
-            <div class="input_part2">
-            <a href="#" class="myButton">Login</a>
+            <input type="password" name="" id="pass-SignIn-Input"> <br>
+    </div>
+    <div class="input_part2">
+                <div id="email_help" class="form-error"></div>
+            <!-- <a href="#" class="myButton" id="sign-in-btn">SignIn</a> -->
+            <a href="#"  id="go"><input type="submit" value="SignIn" class="myButton" id="sign-in-btn"></a>
+            <!-- <button type="submit" value="SignIn" class="myButton" id="sign-in-btn" >SignIn</button> -->
             <p>Don't have an account? <a class="reg" href="sign_up.html">Sign Up</a></p>
-        </div>
-   
+    </div>
+        </form>
         </section>
-       
-
         <footer class="row center">
 
             @All right reserved
         </footer>
     </div>
+    <script src="sign_in.js"></script>
 </body>
 
 </html>
