@@ -20,50 +20,6 @@
 <body>
    
     <div class="grid-container">
-        <!-- ///start sign Up PopUp///// -->
-        <div class="popUpSignUp1">
-              <div class="popupContent">
-                  
-                    <span onclick="removePopup(event)" class="close1">x</span>
-                
-
-
-                <section id="signin_section">
-                    <h2>Sign Up</h2>
-                    <div class="gridIcon">
-                    <div class="divIcon">
-                        <i class="icoonSign fas fa-user"></i>
-                        <i class="icoonSign fas fa-envelope"></i>
-                        <i class="icoonSign fas fa-key"></i>
-                    </div>
-        
-                    <form id="form" name="form" onsubmit="signUp(event)" role="form" action="sign_in.html">
-                    <div class="input_part1">
-                    <p>Username <span class="starF">*</span></p>
-                    <input type="text" name="" id="input_username" required>
-                          <div id="username_help" class="form-text"> <small> The Username should be between 4-15 characters.</small></div>
-                    <p>Email <span class="starF">*</span></p>
-                    <input type="email" name="" id="input_email" required>
-                   
-                          <div id="email_help" class="form-text"><small> eg: username@domain.com</small></div>
-                    <p>Password <span class="starF">*</span></p>
-                    
-                    <input type="password" name="" id="input_pass" required> <br>
-                 
-                          <div id="pass_help" class="form-text"><small>The Password should be between 6-18 characters.</small></div>
-                </div>
-                    <div class="input_part2">
-                        <input id="signup_btn" class="myButton" type="submit" value="Sign Up" id="signup_btn">
-                    <p>Already have an account? <a class="reg" href="sign_in.html">Sign In</a></p>
-                </div>
-            </form>
-        </div>
-                </section>
-              </div>
-        </div>
-
-<!-- //End Sign Up PopUp//////// -->
-
         <header class="rowHeader">
             <div>
                 <a class="brand" href="index.html">Quiz</a>
@@ -146,10 +102,6 @@
 
     <script>
         let startQuiz = document.querySelectorAll('.startQuiz')
-        let register = document.querySelector('#register');
-
-        console.log(register.innerHTML)
-
         startQuiz.forEach(x => {
             x.addEventListener('click', function (e) {
                 
@@ -163,14 +115,7 @@
             })
         })
 
-        // const registerNow=e=>{
-        //     document.querySelector('.popUpSignUp1').style.display="flex";
-        //     e.preventDefault()
-
-        // }
-        // const removePopup=e=>{
-        //     document.querySelector('.popUpSignUp1').style.display="none";
-        // }
+    
     </script>
     <script src="sign.js"></script>
 </body>
