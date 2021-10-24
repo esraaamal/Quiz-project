@@ -71,7 +71,7 @@ const signIn=(e)=>{
     let email=document.getElementById('emailSignIn')
     let password=document.getElementById('passSignIn')
     let formData=JSON.parse(localStorage.getItem('formData'))||[]
-    let exist=formData.length && JSON.parse(localStorage.getItem('formData')).some(data=>data.email.toLowerCase()==email.value.toLowerCase()&&data.password===password.value)
+    let exist=formData.length && JSON.parse(localStorage.getItem('formData')).some(data=>data.email.toLowerCase()==email.value.toLowerCase())
   JSON.parse(localStorage.getItem('formData')).forEach(data=> {
       if(data.email.toLowerCase()==email.value.toLowerCase()){
           userName1=data.userName
@@ -79,6 +79,8 @@ const signIn=(e)=>{
 
   });
 if(!exist){
+    console.log(userName1)
+
     document.getElementById("signinError").style.color="red"
     document.getElementById("signinError").style.marginTop="1rem"
     document.getElementById("signinError").innerHTML="Email or Password is incorrect"
@@ -92,8 +94,6 @@ e.preventDefault()
 
 
 }
-
-
 
 </script>
    
