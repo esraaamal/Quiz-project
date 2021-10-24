@@ -76,7 +76,6 @@ function getJson(path){
             x.checked=false
         })
     }
-    var count=0;
 
     function renderQuizzes(e){  
         let correctAnswer=getUserAnswer();
@@ -86,7 +85,9 @@ function getJson(path){
                 score++
             }
             currentQuiz++;
-    
+            if(currentQuiz==data[str].length-1){
+                submitBtn.innerHTML="Submit"
+            }
        if(currentQuiz<data[str].length){
            loadData()
        }else{
@@ -118,11 +119,11 @@ function getJson(path){
     
     
         }
-        count ++
-        if (count===4){
-            submitBtn.innerHTML="Submit"
+        // count ++
+        // if (count===4&&){
+        //     submitBtn.innerHTML="Submit"
 
-        }
+        // }
 
     }
     
