@@ -1,4 +1,4 @@
-.table {
+/* .table {
     width: 50%;
     border-collapse: collapse;
     margin: auto;
@@ -24,3 +24,22 @@
     width: 100%;
     margin: auto;
 }
+ */
+
+
+ 
+
+   .cont {
+    height: 80vh;
+    margin-top: 30px;
+    }
+    
+    
+   td{
+
+   text-align: center;
+    font-weight: bold;
+        }
+   th{
+   text-align: center;
+        }
