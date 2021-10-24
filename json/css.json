@@ -22,7 +22,7 @@
         "b": "margin-bottom",
         "c": "margin-top",
         "d": "margin-up",
-        " correct": "c"
+        "correct": "c"
       },
       {
         "question": "Q4. Which of the following property is used to control the position of an image in the background?",

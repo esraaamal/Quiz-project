@@ -14,41 +14,88 @@
 
 <body>
     <div class="grid-container">
-        <header class="row">
+        <header class="rowHeader">
             <div>
                 <a class="brand" href="index.html">Quiz</a>
             </div>
-            <div>
+            <div class="navBox1">
                 <a href="index.html">Home</a>
-                <a href="sign.html">Register/Sign In</a>
+                <div>
+                    <a href="" onclick="registerNow(event)" id="register">Register</a>
+                    <a href="sign.html">/Sign In</a>
+                </div>
 
             </div>
 
-
         </header>
 
-        <section id="signin_section">
-            <h2>Sign In</h2>
 
-            <div class="input_part1">
+
+        <div class="popUpSignUp2">
+            <div class="popupContent">
+
+        <section id="signin_section2">
+            <h2>Sign In</h2>
+        <form role="form" onsubmit="signIn(event)" autocomplete="on" action="index.html">
+
+            <div class="input_part11">
             <p>Email</p>
-            <input type="email" name="" id="">
+            <input type="email" name="email" id="emailSignIn" required>
             <p>Password</p>
-            <input type="password" name="" id=""> <br>
+            <input type="password" name="password" id="passSignIn" required>
         </div>
             <div class="input_part2">
-            <a href="#" class="myButton">Login</a>
-            <p>Don't have an account? <a class="reg" href="sign_up.html">Sign Up</a></p>
+            <input  type="submit" class="myButton" value="Sign In">
+            <p>Don't have an account? <a class="reg" href="index.html">Sign Up</a></p>
         </div>
-   
+
+
+
+        </form>
         </section>
-       
+       </div>
+       </div>
 
-        <footer class="row center">
+       <footer class="rowHeader centerGenral">
 
-            @All right reserved
-        </footer>
+        @All right reserved
+    </footer>
     </div>
+
+<script src="sign.js"></script>
+
+   <script>
+//        const signIn=(e)=>{
+//     console.log('hi')
+//     let userName1;
+//     let email=document.getElementById('emailSignIn')
+//     console.log(email.value)
+//     let password=document.getElementById('passSignIn')
+//     let formData=JSON.parse(localStorage.getItem('formData'))||[]
+//     let exist=formData.length && JSON.parse(localStorage.getItem('formData')).some(data=>data.email.toLowerCase()==email.value.toLowerCase())
+//   JSON.parse(localStorage.getItem('formData')).forEach(data=> {
+//       console.log(data)
+//       if(data.email.toLowerCase()==email.value.toLowerCase()){
+//           userName1=data.useName
+//       }
+
+//   });
+// if(!exist){
+//     alert(' incorrect Sign In please register First!')
+
+// }
+// else{
+//     console.log('hi')
+//     console.log(userName1)
+//     localStorage.setItem('username',userName1)
+//     location.href="/"
+// }
+// e.preventDefault()
+
+
+// }
+
+   </script>
 </body>
 
 </html>

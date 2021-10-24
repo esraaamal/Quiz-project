@@ -2,31 +2,85 @@
 <html lang="en">
 
 <head>
-    
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/signin.css">
     <title>Quiz App</title>
+        
+    <style>
+    
+    </style>
 </head>
 
 <body>
+   
     <div class="grid-container">
+        <!-- ///start sign Up PopUp///// -->
+        <div class="popUpSignUp1">
+              <div class="popupContent">
+                  
+                    <span onclick="removePopup(event)" class="close1">x</span>
+                
+
+
+                <section id="signin_section">
+                    <h2>Sign Up</h2>
+                    <div class="gridIcon">
+                    <div class="divIcon">
+                        <i class="icoonSign fas fa-user"></i>
+                        <i class="icoonSign fas fa-envelope"></i>
+                        <i class="icoonSign fas fa-key"></i>
+                    </div>
+        
+                    <form id="form" name="form" onsubmit="signUp(event)" role="form" action="sign_in.html">
+                    <div class="input_part1">
+                    <p>Username <span class="starF">*</span></p>
+                    <input type="text" name="" id="input_username" required>
+                          <div id="username_help" class="form-text"> <small> The Username should be between 4-15 characters.</small></div>
+                    <p>Email <span class="starF">*</span></p>
+                    <input type="email" name="" id="input_email" required>
+                   
+                          <div id="email_help" class="form-text"><small> eg: username@domain.com</small></div>
+                    <p>Password <span class="starF">*</span></p>
+                    
+                    <input type="password" name="" id="input_pass" required> <br>
+                 
+                          <div id="pass_help" class="form-text"><small>The Password should be between 6-18 characters.</small></div>
+                </div>
+                    <div class="input_part2">
+                        <input id="signup_btn" class="myButton" type="submit" value="Sign Up" id="signup_btn">
+                    <p>Already have an account? <a class="reg" href="sign_in.html">Sign In</a></p>
+                </div>
+            </form>
+        </div>
+                </section>
+              </div>
+        </div>
+
+<!-- //End Sign Up PopUp//////// -->
+
         <header class="rowHeader">
             <div>
                 <a class="brand" href="index.html">Quiz</a>
             </div>
-            <div >
+            <div class="navBox1">
                 <a href="index.html">Home</a>
-                <a href="sign.html" id="register"></a>
+                <div>
+                    <a href="" onclick="registerNow(event)" id="register">Register</a>
+                    <a href="sign_in.html">/Sign In</a>
+                </div>
 
             </div>
 
 
         </header>
         <main class="mainSection">
+           
             <div class="welcomeQuiz">
                 Welcome to Web Developer position <br>
                 please Answer all the Quizzes to get the interview Job !
@@ -34,46 +88,51 @@
 
             <div class="rowHeader quizCard">
 
- <!-- first card -->
-    <div class="card" style="width: 25rem;">
-        <i  class="fab fa-html5"></i>
-        <div class="card-body">
-          <h5 class="card-title">HTML</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <small>Estimate Time : 5 minutes</small>
-          <a href="#" id="hyperText" class="btn btn-primary quizBtn startQuiz">Start Quiz</a>
-         
-        </div>
-      </div>
-<!-- ///second card  -->
-    <div class="card" style="width: 25rem;">
-        <i class="fab fa-css3-alt"></i>
-        <div class="card-body">
-          <h5 class="card-title">CSS</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <small>Estimate Time : 5 minutes</small>
-          <a href="#"  id="cssStyle" class="btn btn-primary quizBtn startQuiz">Start Quiz</a>
-        </div>
-      </div>
+                <!-- first card -->
+                <div class="card" style="width: 25rem;">
+                    <i class="fab fa-html5"></i>
+                    <div class="card-body">
+                        <h5 class="card-title">HTML</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <small>Estimate Time : 5 minutes</small>
+                        <a href="#" id="hyperText" class="btn btn-primary quizBtn startQuiz">Start Quiz</a>
 
-<!-- ////thired card -->
+                    </div>
+                </div>
+                <!-- ///second card  -->
+                <div class="card" style="width: 25rem;">
+                    <i class="fab fa-css3-alt"></i>
+                    <div class="card-body">
+                        <h5 class="card-title">CSS</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <small>Estimate Time : 5 minutes</small>
+                        <a href="#" id="cssStyle" class="btn btn-primary quizBtn startQuiz">Start Quiz</a>
+                    </div>
+                </div>
 
-    <div class="card" style="width: 25rem;">
-        <i  class="fab fa-html5 js"></i>
-        <div class="card-body">
-          <h5 class="card-title">Javascript</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <small>Estimate Time : 5 minutes</small>
-          <a href="#" id="javascr" class="btn btn-primary quizBtn startQuiz">Start Quiz</a>
-        </div>
-      </div>
+                <!-- ////thired card -->
 
-<!-- //////////////// -->
+                <div class="card" style="width: 25rem;">
+                    <i class="fab fa-html5 js"></i>
+                    <div class="card-body">
+                        <h5 class="card-title">Javascript</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <small>Estimate Time : 5 minutes</small>
+                        <a href="#" id="javascr" class="btn btn-primary quizBtn startQuiz">Start Quiz</a>
+                    </div>
+                </div>
+
+                <!-- //////////////// -->
 
 
 
 
             </div>
+
+           
         </main>
         <footer class="rowHeader centerGenral">
 
@@ -86,28 +145,36 @@
 
 
     <script>
-let startQuiz=document.querySelectorAll('.startQuiz')
-let register=document.querySelector('#register');
+        let startQuiz = document.querySelectorAll('.startQuiz')
+        let register = document.querySelector('#register');
 
-console.log(register.innerHTML)
+        console.log(register.innerHTML)
 
-startQuiz.forEach(x=>{
-    x.addEventListener('click',function(e){
-if ( register.innerHTML=="Register/Sign In"){
-   alert('you have to register first')
-}else if( register.innerHTML==""){
-    console.log(x.id)
-    localStorage.setItem('id',x.id)
-   x.setAttribute('href','quiz.html')
+        startQuiz.forEach(x => {
+            x.addEventListener('click', function (e) {
+                if (register.innerHTML == "Register") {
+                    alert('you have to register first')
+                } else if (register.innerHTML == "") {
+                    console.log(x.id)
+                    localStorage.setItem('id', x.id)
+                    x.setAttribute('href', 'quiz.html')
 
-}
-
-
-})
-})
+                }
 
 
+            })
+        })
+
+        const registerNow=e=>{
+            document.querySelector('.popUpSignUp1').style.display="flex";
+            e.preventDefault()
+
+        }
+        const removePopup=e=>{
+            document.querySelector('.popUpSignUp1').style.display="none";
+        }
     </script>
+    <script src="sign.js"></script>
 </body>
 
 </html>

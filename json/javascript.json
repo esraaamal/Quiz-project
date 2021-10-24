@@ -22,7 +22,7 @@
         "b": "toLower()",
         "c": "changeCase(case)",
         "d": "None of the above",
-        " correct": "a"
+        "correct": "a"
       },
       {
         "question": "Q4. Which of the following function of Number object returns a string value version of the current number?",

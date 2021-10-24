@@ -1,6 +1,8 @@
 const sign_Btn=document.getElementById("signup_btn");
 const form=document.getElementById("form");
 sign_Btn.addEventListener("click",sginFunction);
+let welcomeQuiz=document.querySelector('.welcomeQuiz')
+
 
 
 
@@ -26,7 +28,7 @@ const format_pass = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
    
     
 
-function sginFunction() {
+function sginFunction(e) {
 
     //userName
     if(input_username.value===""){
@@ -94,42 +96,85 @@ else{
         pass_help.style.color="red";
        
     }
+
+}
+// e.preventDefault()
+
+}
+
+
+////how to store the data from user input ! ///////
+
+const signUp=(e)=>{
+    let formData=JSON.parse(localStorage.getItem('formData')) ||[]
+    let exist=formData.length &&
+    JSON.parse(localStorage.getItem('formData')).some(data=>data.email.toLowerCase()==input_email.value.toLowerCase())
     
-    
-   
-   
-   
-}}
-// let usernames =[];
-// let passwords=[];
-// let emails=[];
+    if(!exist){
+        formData.push(
+            {    
+                useName:input_username.value,
+                email:input_email.value,
+                password:input_pass.value
+            })
 
-let users = [];
-
- form.addEventListener("submit",f);
-
- function f(){
-
-    if(input_username.value.match(username_format)&&input_email.value.match(email_format)&&input_pass.value.match(format_pass)){
-usernames.push(input_username.value);
-passwords.push(input_pass.value);
-emails.push(input_email.value);
-
-users.push({"username" : input_username.value, "password" : input_pass.value, "email":input_email.value});
-
-localStorage.setItem("Usernames",JSON.stringify(usernames));
-localStorage.setItem("emails",JSON.stringify(emails));
-localStorage.setItem("passwords",JSON.stringify(passwords));
-localStorage.setItem("users",JSON.stringify(users));
-
-input_username.value="";
-input_email.value="";
-input_pass.value="";
+            localStorage.setItem('formData',JSON.stringify(formData))
+            console.log(JSON.parse(localStorage.getItem('formData')))
+            form.reset()
+            input_username.focus()
 
     }
- }
+    else{
+        alert('you already have an account')
+    }
 
 
+    // e.preventDefault()
 
 
+}
+function loadName(){
+let nameSign=localStorage.getItem('username')
+if(nameSign){
+    welcomeQuiz.innerHTML= "Welcome to Web Developer position"+ "<br>"
+   + "please Answer all the Quizzes to get the interview Job !"
+}
+else{
+    welcomeQuiz.innerHTML=`Welcome to Web Developer position <mark>${nameSign}</mark> 
+    <br> please Answer all the Quizzes to get the interview Job !`
+}
 
+}
+loadName()
+
+///////////Sign In Page'////////////
+const signIn=(e)=>{
+    console.log('hi')
+    let userName1;
+    let email=document.getElementById('emailSignIn')
+    console.log(email.value)
+    let password=document.getElementById('passSignIn')
+    let formData=JSON.parse(localStorage.getItem('formData'))||[]
+    let exist=formData.length && JSON.parse(localStorage.getItem('formData')).some(data=>data.email.toLowerCase()==email.value.toLowerCase())
+  JSON.parse(localStorage.getItem('formData')).forEach(data=> {
+      console.log(data)
+      if(data.email.toLowerCase()==email.value.toLowerCase()){
+          userName1=data.useName
+      }
+
+  });
+if(!exist){
+    alert(' incorrect Sign In please register First!')
+
+}
+else{
+    console.log('hi')
+    console.log(userName1)
+    localStorage.setItem('username',userName1)
+    location.href="/"
+}
+e.preventDefault()
+
+
+}
+console.log(localStorage.getItem('username'))

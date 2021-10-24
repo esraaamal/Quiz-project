@@ -78,6 +78,11 @@ a.brand{
     border-radius: 0.5rem;
     margin: 0rem 6rem;
    text-align: center;
+   box-shadow: 6px 6px 10px -4px rgb(0 0 0 / 75%);
+   cursor: pointer;
+}
+.card:hover{
+    transform: scale(1.1);
 }
 .quizCard{
     justify-content: center;
@@ -90,10 +95,12 @@ a.brand{
 .fab {
     font-size: 150px;
     color: #E44D26;
+    
 
 }
+
 .fa-css3-alt{
-color: #0070BA;
+color: #107bc2;
 }
 .js{
     color: #63A814;
@@ -121,4 +128,11 @@ color: #0070BA;
 }
 #register{
     display: inline;
+    margin-left: 29px;
+    margin-right: -20px;
 }
+.navBox1{
+    display: -webkit-box;
+};
+
+/* ///////////sign Up/////////// */

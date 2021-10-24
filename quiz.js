@@ -90,13 +90,18 @@ function getJson(path){
            loadData()
        }else{
            e.preventDefault()
-        quiz.innerHTML=`<h2>you answered correctly at ${score}/${data[str].length} questions.
-        </h2>`;
+           let nameSign=localStorage.getItem('username')
+           if(score>=3){
+        quiz.innerHTML=`<h2> <span style='font-size:50px;'>&#128512;</span> Good Job <mark> ${nameSign} </mark> !<br> you pass the Quiz <br> answered correctly ${score} out ${data[str].length} questions.
+        </h2>`;}else{
+            quiz.innerHTML=`<h2> <span style='font-size:50px;'>&#128577;</span> Good Luck <mark> ${nameSign} </mark> !<br> you answered correctly ${score} out ${data[str].length} questions.
+        </h2>`; 
+        }
         setLocalStorage()
         reload.style.display="block"
         reload.setAttribute('onclick','location.reload()')
         submitBtn.innerText='Show all result'
-        resultPage.setAttribute('href','index.html')
+        resultPage.setAttribute('href','result.html')
         console.log(resultPage)
         submitBtn.removeEventListener('click',renderQuizzes)
     

@@ -10,17 +10,18 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="row result-table-header" >
+    <div class="grid-container">
+    <header class="rowHeader">
         <div>
             <a class="brand" href="index.html">Quiz</a>
         </div>
-        <div>
+        <div >
             <a href="index.html">Home</a>
-            <a href="sign.html">user profile</a>
-            <a href="sign.html">Logout</a>
+            <a href="sign.html" id="register"></a>
+
         </div>
-    
-    
+
+
     </header>
     <div class="table-responsive">
         <table class="table">
@@ -29,7 +30,12 @@
                 <th>Your answer</th>
                 <th>Correct answer</th>
             </tr>
-            <tr>
+            <tbody>
+
+
+
+            </tbody>
+            <!-- <tr>
                 <td>Q1</td>
                 <td>A</td>
                 <td>B</td>
@@ -53,13 +59,42 @@
                 <td>Q5</td>
                 <td>A </td>
                 <td>B </td>
-            </tr>
+            </tr> -->
             
         </table>
     </div>
-    <footer class="row center result-table-footer">
-    
+    <footer class="rowHeader centerGenral">
+
         @All right reserved
     </footer>
+</div>
+<script>
+//  {question: "Q1. What does HTML stand for?", useAnswer: "a", correct: "c"}
+    let tbody=document.querySelector('tbody')
+    console.log(tbody)
+    console.log(JSON.parse(localStorage.getItem('userAnswer')))
+    JSON.parse(localStorage.getItem('userAnswer')).forEach(element => {
+        if(element.useAnswer!=element.correct){
+    
+        tbody.innerHTML += `
+             <tr style="background:red;" >
+                <td>${element.question}</td>
+                <td>${element.useAnswer}</td>
+                <td>${element.correct}</td>
+            </tr>
+        `}
+        else{
+            
+        tbody.innerHTML += `
+             <tr style="background:green;" >
+                <td>${element.question}</td>
+                <td>${element.useAnswer}</td>
+                <td>${element.correct}</td>
+            </tr>
+        `}
+        }
+        
+    );
+</script>
 </body>
 </html>
