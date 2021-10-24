@@ -113,7 +113,7 @@ const signUp=(e)=>{
     if(!exist){
         formData.push(
             {    
-                useName:input_username.value,
+                userName:input_username.value,
                 email:input_email.value,
                 password:input_pass.value
             })
@@ -134,8 +134,9 @@ const signUp=(e)=>{
 
 }
 function loadName(){
+    console.log(localStorage.getItem('username'))
 let nameSign=localStorage.getItem('username')
-if(nameSign){
+if(!nameSign.length){
     welcomeQuiz.innerHTML= "Welcome to Web Developer position"+ "<br>"
    + "please Answer all the Quizzes to get the interview Job !"
 }
@@ -148,33 +149,4 @@ else{
 loadName()
 
 ///////////Sign In Page'////////////
-const signIn=(e)=>{
-    console.log('hi')
-    let userName1;
-    let email=document.getElementById('emailSignIn')
-    console.log(email.value)
-    let password=document.getElementById('passSignIn')
-    let formData=JSON.parse(localStorage.getItem('formData'))||[]
-    let exist=formData.length && JSON.parse(localStorage.getItem('formData')).some(data=>data.email.toLowerCase()==email.value.toLowerCase())
-  JSON.parse(localStorage.getItem('formData')).forEach(data=> {
-      console.log(data)
-      if(data.email.toLowerCase()==email.value.toLowerCase()){
-          userName1=data.useName
-      }
 
-  });
-if(!exist){
-    alert(' incorrect Sign In please register First!')
-
-}
-else{
-    console.log('hi')
-    console.log(userName1)
-    localStorage.setItem('username',userName1)
-    location.href="/"
-}
-e.preventDefault()
-
-
-}
-console.log(localStorage.getItem('username'))

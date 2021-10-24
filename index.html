@@ -152,14 +152,12 @@
 
         startQuiz.forEach(x => {
             x.addEventListener('click', function (e) {
-                if (register.innerHTML == "Register") {
-                    alert('you have to register first')
-                } else if (register.innerHTML == "") {
+                
                     console.log(x.id)
                     localStorage.setItem('id', x.id)
                     x.setAttribute('href', 'quiz.html')
 
-                }
+                
 
 
             })

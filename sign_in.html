@@ -61,41 +61,45 @@
         @All right reserved
     </footer>
     </div>
-
 <script src="sign.js"></script>
+<script>
 
-   <script>
-//        const signIn=(e)=>{
-//     console.log('hi')
-//     let userName1;
-//     let email=document.getElementById('emailSignIn')
-//     console.log(email.value)
-//     let password=document.getElementById('passSignIn')
-//     let formData=JSON.parse(localStorage.getItem('formData'))||[]
-//     let exist=formData.length && JSON.parse(localStorage.getItem('formData')).some(data=>data.email.toLowerCase()==email.value.toLowerCase())
-//   JSON.parse(localStorage.getItem('formData')).forEach(data=> {
-//       console.log(data)
-//       if(data.email.toLowerCase()==email.value.toLowerCase()){
-//           userName1=data.useName
-//       }
+const signIn=(e)=>{
+    
+    console.log('hi')
+    let userName1;
+    let email=document.getElementById('emailSignIn')
+    console.log(email.value)
+    let password=document.getElementById('passSignIn')
+    let formData=JSON.parse(localStorage.getItem('formData'))||[]
+    let exist=formData.length && JSON.parse(localStorage.getItem('formData')).some(data=>data.email.toLowerCase()==email.value.toLowerCase())
+  JSON.parse(localStorage.getItem('formData')).forEach(data=> {
+      console.log(data)
+      if(data.email.toLowerCase()==email.value.toLowerCase()){
+          userName1=data.userName
+      }
 
-//   });
-// if(!exist){
-//     alert(' incorrect Sign In please register First!')
+  });
+if(!exist){
+    alert(' incorrect Sign In please register First!')
 
-// }
-// else{
-//     console.log('hi')
-//     console.log(userName1)
-//     localStorage.setItem('username',userName1)
-//     location.href="/"
-// }
-// e.preventDefault()
+}
+else{
+    
+    console.log(userName1)
+    localStorage.setItem('username',userName1)
+    
+    location.href="/"
+}
+e.preventDefault()
 
 
-// }
+}
+console.log(localStorage.getItem('username'))
 
-   </script>
+
+</script>
+   
 </body>
 
 </html>
