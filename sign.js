@@ -3,9 +3,17 @@ const form=document.getElementById("form");
 sign_Btn.addEventListener("click",sginFunction);
 let welcomeQuiz=document.querySelector('.welcomeQuiz')
 
+////popUp////
+const registerNow=e=>{
+    document.querySelector('.popUpSignUp1').style.display="flex";
+    e.preventDefault()
 
+}
+const removePopup=e=>{
+    document.querySelector('.popUpSignUp1').style.display="none";
+}
 
-
+///////////popUp////
 
 
 //username
