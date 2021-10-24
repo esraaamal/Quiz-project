@@ -76,8 +76,9 @@ function getJson(path){
             x.checked=false
         })
     }
-    
-    function renderQuizzes(e){
+    var count=0;
+
+    function renderQuizzes(e){  
         let correctAnswer=getUserAnswer();
         console.log(resultHistory)
         if(correctAnswer){
@@ -93,9 +94,13 @@ function getJson(path){
            let nameSign=localStorage.getItem('username')
            if(score>=3){
         quiz.innerHTML=`<h2> <span style='font-size:50px;'>&#128512;</span> Good Job <mark> ${nameSign} </mark> !<br> you pass the Quiz <br> answered correctly ${score} out ${data[str].length} questions.
-        </h2>`;}else{
-            quiz.innerHTML=`<h2> <span style='font-size:50px;'>&#128577;</span> Good Luck <mark> ${nameSign} </mark> !<br> you answered correctly ${score} out ${data[str].length} questions.
+        </h2>`;
+        quiz.style.backgroundColor="#70a658"
+         }else{
+            quiz.innerHTML=`<h2> <span style='font-size:50px;'>&#128577;</span> Hard Luck <mark> ${nameSign} </mark> !<br> you answered correctly ${score} out ${data[str].length} questions.
         </h2>`; 
+        quiz.style.backgroundColor="#ef5045"
+
         }
         setLocalStorage()
         reload.style.display="block"
@@ -104,6 +109,7 @@ function getJson(path){
         resultPage.setAttribute('href','result.html')
         console.log(resultPage)
         submitBtn.removeEventListener('click',renderQuizzes)
+
     
         // submitBtn.setAttribute('onclick','location.reload()')
         
@@ -112,6 +118,12 @@ function getJson(path){
     
     
         }
+        count ++
+        if (count===4){
+            submitBtn.innerHTML="Submit"
+
+        }
+
     }
     
     submitBtn.addEventListener('click',renderQuizzes)
@@ -155,5 +167,7 @@ if(idName !=null){
 
    }
 }
+
+
 
 
