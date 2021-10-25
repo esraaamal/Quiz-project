@@ -26,17 +26,18 @@
         .centerText{
             text-align: center;
         }
+        
     </style>
 </head>
 <body>
     <div class="grid-container">
     <header class="rowHeader">
-        <div>
-            <a class="brand" href="index.html">Quiz</a>
+        <div class="whiteLogo">
+            <a class="brand" href="index.html"><img src="/images/CaptureWhite.png"></a>
         </div>
-        <div >
+        <div class="navBar" >
             <a href="index.html">Home</a>
-            <a href="sign.html" id="register"></a>
+            <a  href="./landing/landing.html">Log Out</a>
 
         </div>
 
@@ -70,33 +71,6 @@
         @All right reserved
     </footer>
 </div>
-<script>
-    let tbody=document.querySelector('tbody')
-    console.log(tbody)
-    console.log(JSON.parse(localStorage.getItem('userAnswer')))
-    JSON.parse(localStorage.getItem('userAnswer')).forEach(element => {
-        if(element.useAnswer!=undefined){
-        if(element.useAnswer!=element.correct){
-    
-        tbody.innerHTML += `
-             <tr style="color:red;" >
-                <td>${element.question}</td>
-                <td>${element.useAnswer}</td>
-                <td>${element.correct}</td>
-            </tr>
-        `}
-        else{
-            
-        tbody.innerHTML += `
-             <tr style="color:green;" >
-                <td>${element.question}</td>
-                <td>${element.useAnswer}</td>
-                <td>${element.correct}</td>
-            </tr>
-        `}
-        }
-    }
-    );
-</script>
+<script src="js/result.js"></script>
 </body>
 </html>
