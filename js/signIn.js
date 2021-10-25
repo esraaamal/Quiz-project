@@ -9,7 +9,7 @@ const removePopup2=e=>{
         let password=document.getElementById('passSignIn')
         let formData=JSON.parse(localStorage.getItem('formData'))||[]
         if (localStorage.length==0){
-            document.getElementById("signin-form").action="./landing/landing.html"
+            document.getElementById("signin-form").action="landing/landing.html"
            alert("You Must Register first")
         }
         let exist=formData.length && JSON.parse(localStorage.getItem('formData')).some(data=>data.email.toLowerCase()==email.value.toLowerCase()&&data.password===password.value)
