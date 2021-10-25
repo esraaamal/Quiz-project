@@ -30,14 +30,7 @@
     border-radius: 5px;
     position: relative;
 }
-.popupContent3{
-   
-    width: 500px;
-    background: #f1f8fc;
-    padding: 14px 45px;
-    border-radius: 5px;
-    position: relative;
-}
+
 .close1{
     position:absolute;
     right: 2%;
@@ -226,10 +219,6 @@ margin-left: 20%;
 padding: 14px 6px;
 width: 88%;
 }
-.popupContent3{
-padding: 14px 6px;
-width: 98%;}
-
 
 .input_part1{
 width: 400px;
