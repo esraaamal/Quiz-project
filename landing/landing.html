@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" referrerpolicy="no-referrer" />
     <title>Landing Page With Light/Dark Mode</title>
     <link rel="stylesheet" href="styleLanding.css" />
-    <link rel="stylesheet" href="/css/signin.css">
+    <link rel="stylesheet" href="../css/signin.css">
 
  <style>
    .person{
@@ -71,14 +71,13 @@
         <header>
           <div class="container">
             <div class="logo">
-              <img src="./img/logo.png" alt="Logo" />
+              <img src="img/Capture.png" alt="Logo" />
               <!-- <h3>Danvo in a new branch</h3> -->
             </div>
 
             <div class="links">
               <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
+                
                 <li><a href="../sign_in.html"  class="btn">Sign In</a></li>
                 <li><a href="#" onclick="registerNow(event)" class="btn">Sign up</a></li>
 
@@ -104,10 +103,10 @@
                 A full-stack web developer or engineer is needed to handle the development work of the ideal 
                 candidate should?work with both the front and back ends of a website or application to tackle
                  projects that involve databases, building user-facing websites, or even work with 
-                clients during the planning phase of projects.Full-stack web developer should be familiar with :?HTML, CSS, JavaScript
+                clients during the planning phase of projects.Full-stack web developer should be familiar with HTML, CSS, JavaScript
               </p>
               <div class="cta">
-                <a href="#" onclick="registerNow(event)" class="btn">Get started</a>
+                <a href="#" onclick="registerNow(event)" class="btn">Apply Now</a>
               </div>
             </div>
 
@@ -130,9 +129,20 @@
     </main>
 
     <!-- JavaScript Files -->
+ <script>
+   ////popUp////
+const registerNow=e=>{
+    document.querySelector('.popUpSignUp1').style.display="flex";
+    e.preventDefault()
 
+}
+const removePopup=e=>{
+    document.querySelector('.popUpSignUp1').style.display="none";
+}
+
+///////////popUp////
+ </script>
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
-    <script src="../sign.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
