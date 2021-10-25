@@ -1,3 +1,4 @@
+
 const removePopup2=e=>{
     location.href="./landing/landing.html"
         }
@@ -34,4 +35,5 @@ const removePopup2=e=>{
     
     
     }
+
     

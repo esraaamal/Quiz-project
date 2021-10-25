@@ -3,6 +3,7 @@ html {
   box-sizing: border-box;
 }
 
+
 body {
   margin: 0;
   height: 100vh;
@@ -26,14 +27,17 @@ header {
   background: #64bcf4;
 }
 
+
 main {
   grid-area: main;
   padding: 1rem;
 }
+
 footer {
   grid-area: footer;
   background: #64bcf4;
   color: #ffffff;
+
 }
 /* common */
 h1 {
@@ -70,6 +74,7 @@ a.brand {
   justify-content: center;
 }
 
+
 .card {
   border: 0.1rem solid #c0c0c0;
   background: #f8f8f8;
@@ -95,6 +100,7 @@ a.brand {
 }
 .navBar {
   padding: 0 59px;
+
 }
 
 .fab {
@@ -108,6 +114,7 @@ a.brand {
 .js {
   color: #63a814;
 }
+
 
 .card-title {
   font-weight: 900;
@@ -131,6 +138,7 @@ a.brand {
   display: inline;
   margin-left: 29px;
   margin-right: -20px;
+
 }
 .navBox1 {
   display: -webkit-box;

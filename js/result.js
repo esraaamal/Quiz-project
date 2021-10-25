@@ -1,4 +1,5 @@
 
+
 let tbody=document.querySelector('tbody')
 console.log(tbody)
 console.log(JSON.parse(localStorage.getItem('userAnswer')))
@@ -24,4 +25,5 @@ JSON.parse(localStorage.getItem('userAnswer')).forEach(element => {
     `}
     }
 }
+
 );
