@@ -215,7 +215,8 @@ margin-left: 20%;
 
 }
 .popupContent{
-padding: 14px 20px;
+padding: 14px 6px;
+width: 88%;
 }
 .input_part1{
 width: 400px;
