@@ -1,3 +1,4 @@
+
 //Fill html with question and choice
 const question=document.getElementById('question')
 const aText=document.getElementById("a-text")
@@ -172,6 +173,7 @@ if(idName !=null){
 
    }
 }
+
 
 
 
