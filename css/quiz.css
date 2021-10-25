@@ -162,5 +162,13 @@ ul li {
   .correctAnswer1 p {
     font-size: large;
   }
+
+  .quiz-container2 {   
+    padding: 5% 0;
+    width: 355px;
+  }
+  .twoBtn {
+    width: 96%;}
+  
 }
 
