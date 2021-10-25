@@ -80,7 +80,8 @@ function getJson(path){
             }
         })
         console.log(firstAnswer)
-        new HistoryAnswer(data[str][currentQuiz].question,firstAnswer,data[str][currentQuiz].correct)
+        new HistoryAnswer(data[str][currentQuiz].question,`${firstAnswer}: ${data[str][currentQuiz][firstAnswer]}`
+        ,`${data[str][currentQuiz].correct}:${data[str][currentQuiz][data[str][currentQuiz].correct]}`)
     
         return firstAnswer
     
