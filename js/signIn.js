@@ -28,7 +28,7 @@ const removePopup2=e=>{
     }
     else{
         localStorage.setItem('username',userName1)
-        location.href="/"
+        location.href="index.html"
     }
     e.preventDefault()
     
