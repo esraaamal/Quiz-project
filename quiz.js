@@ -7,7 +7,13 @@ const dText=document.getElementById("d-text")
 
 
 const submitBtn=document.getElementById('submit')
+const resultBtn=document.getElementById('submit2')
 const reload=document.getElementById('reload')
+let quizContainer2=document.querySelector('.quiz-container2')
+let correctAnswer1=document.querySelector('.correctAnswer1')
+let backContainer=document.querySelector('.backContainer')
+console.log(correctAnswer1)
+
 
 //know what is the answer was clicked by user
 const answerEls=document.querySelectorAll('.answer')
@@ -15,6 +21,14 @@ const quiz=document.getElementById("quiz")
 
 const resultPage=document.getElementById('resultPage')
 
+// start pop Up info/
+const reloadWindow=e=>{
+    location.href="quiz.html"
+}
+const reloadPag=e=>{
+location.reload();
+}
+// End pop Up info/
 
 
 function getJson(path){
@@ -91,39 +105,36 @@ function getJson(path){
        if(currentQuiz<data[str].length){
            loadData()
        }else{
-           e.preventDefault()
-           let nameSign=localStorage.getItem('username')
+        e.preventDefault()
+        let nameSign=localStorage.getItem('username')
+        backContainer.style.display="flex"
+
            if(score>=3){
-        quiz.innerHTML=`<h2> <span style='font-size:50px;'>&#128512;</span> Good Job <mark> ${nameSign} </mark> !<br> you pass the Quiz <br> answered correctly ${score} out ${data[str].length} questions.
-        </h2>`;
-        quiz.style.backgroundColor="#70a658"
+quizContainer2.style.backgroundImage="linear-gradient(315deg,#1e4d2c 0%,#23f056 100%)";
+correctAnswer1.innerHTML=`<p > <span style='font-size:50px;'>&#128512;</span> Good Job <mark>
+${nameSign} </mark> ! </p>
+ You answered correctly : ${score} out ${data[str].length} questions.`
+
          }else{
-            quiz.innerHTML=`<h2> <span style='font-size:50px;'>&#128577;</span> Hard Luck <mark> ${nameSign} </mark> !<br> you answered correctly ${score} out ${data[str].length} questions.
-        </h2>`; 
-        quiz.style.backgroundColor="#ef5045"
+
+            quizContainer2.style.backgroundImage="linear-gradient(315deg,#91091d 0%,#f62c36 100%)"
+            correctAnswer1.innerHTML=`<p> <span style='font-size:50px;'>&#128577;</span> Hard Luck <mark>
+            ${nameSign} </mark> ! </p>
+             You answered correctly : ${score} out ${data[str].length} questions.`;
 
         }
+
         setLocalStorage()
-        reload.style.display="block"
-        reload.setAttribute('onclick','location.reload()')
-        submitBtn.innerText='Show all result'
+        resultBtn.innerText='Show all result'
         resultPage.setAttribute('href','result.html')
         console.log(resultPage)
         submitBtn.removeEventListener('click',renderQuizzes)
 
-    
-        // submitBtn.setAttribute('onclick','location.reload()')
-        
+            
      }
      
-    
-    
-        }
-        // count ++
-        // if (count===4&&){
-        //     submitBtn.innerHTML="Submit"
-
-        // }
+     }
+       
 
     }
     
@@ -135,14 +146,7 @@ function getJson(path){
         localStorage.setItem('userAnswer',convertToJson)
     }
     
-    // function getLocalStorage(){
-    //     var products2=localStorage.getItem('products')
-    //     if(products2 !=null){
-    // productList=JSON.parse(products2)
-    // renderData()
-    //     }
-    // }
-    // getLocalStorage( )
+   
     
     
     })

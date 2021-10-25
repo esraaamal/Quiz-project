@@ -24,7 +24,7 @@ body{
 }
 header{
     grid-area: header;
-    background: #ACE4EC ;}
+    background: #64bcf4 ;}
 
 main{
     grid-area: main;
@@ -32,7 +32,7 @@ main{
 }
 footer{
     grid-area: footer;
-    background: #ACE4EC ;
+    background: #64bcf4 ;
     color: #ffffff;
 }
 /* common */
@@ -116,12 +116,13 @@ color: #107bc2;
 .mainSection{
    display: grid;
    grid-template-columns: 1fr;
-   grid-template-rows:5rem 1fr; 
 }
 .welcomeQuiz{
-    font-size: 21px;
+    font-size: 20px;
     text-align: center;
-    margin-top: 60px;
+    margin-top: 35px;
+    line-height: 0.6;
+    margin-bottom: 30px;
 
 }
 #register{
