@@ -10,7 +10,7 @@ const removePopup2=e=>{
         let formData=JSON.parse(localStorage.getItem('formData'))||[]
         if (localStorage.length==0){
            alert("You Must Register first")
-             document.getElementById("signin-form").action="../landing/landing.html"
+            location.href="index.html"
         }
         let exist=formData.length && JSON.parse(localStorage.getItem('formData')).some(data=>data.email.toLowerCase()==email.value.toLowerCase()&&data.password===password.value)
       JSON.parse(localStorage.getItem('formData')).forEach(data=> {
